@@ -35,19 +35,20 @@
 <td>NÚMERO DE PRÁCTICA:</td><td>03</td><td>AÑO LECTIVO:</td><td>2022 A</td><td>NRO. SEMESTRE:</td><td>III</td>
 </tr>
 <tr>
-<td>FECHA INICIO::</td><td>09-may-2022</td><td>FECHA FIN:</td><td>13-may-2022</td><td>DURACIÓN:</td><td>04 horas</td>
+<td>FECHA INICIO::</td><td>09-May-2022</td><td>FECHA FIN:</td><td>13-May-2022</td><td>DURACIÓN:</td><td>04 horas</td>
 </tr>
 <tr><td colspan="6">RECURSOS:
     <ul>
         <li>https://www.w3schools.com/nodejs/nodejs_intro.asp</li>
-        <li>https://nodejs.org/en/docs/guides/guía-de-primeros-pasos/</li>
+        <li>https://nodejs.org/en/docs/guides/getting-started-guide/</li>
         <li>https://nodejs.dev/learn</li>
         <li>https://www.w3schools.com/js/js_api_fetch.asp</li>
         <li>https://expressjs.com/es/</li>
         <li>https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Using_Fetch</li>
-        <li>https://developer.mozilla.org/es/docs/Learn/Server-side/Express_Nodejs/Introducción</li>
+        <li>https://developer.mozilla.org/es/docs/Learn/Server-side/Express_Nodejs/Introduction</li>
     </ul>
 </td>
+</<tr>
 <tr><td colspan="6">DOCENTE:
 <ul>
 <li>Ing. Anibal Sardon</li>
@@ -61,266 +62,266 @@
 </td>
 </<tr>
 </tdbody>
-</tabla>
+</table>
 
-#Ajax  y NodeJS
+# Ajax y NodeJS
 
-[![ Licencia ][licencia]][archivo de licencia]
-[![ Descargas ][descargas]][lanzamientos]
-[![ Última confirmación ][última confirmación]][lanzamientos]
+[![License][license]][license-file]
+[![Downloads][downloads]][releases]
+[![Last Commit][last-commit]][releases]
 
-[![ Debian ][Debian]][sitio de Debian]
-[![ Git ][Git]][git-sitio]
-[![ GitHub ][GitHub]][sitio de github]
-[![ Vim ][Vim]][vim-sitio]
-[![ Java ][Java]][sitio Java]
+[![Debian][Debian]][debian-site]
+[![Git][Git]][git-site]
+[![GitHub][GitHub]][github-site]
+[![Vim][Vim]][vim-site]
+[![Java][Java]][java-site]
 
 #
 
-##  OBJETIVOS TEMAS Y COMPETENCIAS
+## OBJETIVOS TEMAS Y COMPETENCIAS
 
-###  OBJETIVOS
+### OBJETIVOS
 
--    Aprender peticiones asíncronas en JavaScript usando JSON para la comunicación.
--    Programar en BackEnd usando JavaScript.
--    Entender el concepto de promesas y los objetos no bloqueantes
+-   Aprender peticiones asíncronas en JavaScript usando JSON para la comunicación.
+-   Programar en BackEnd usando JavaScript.
+-   Entender el concepto de promises y los objetos no bloqueantes
 
-###  TEMAS
+### TEMAS
 - Objetos asíncronos
 - Comunicación con POST y GET
-- Programación en el backend
+- Programación en el backend 
 
-<detalles>
+<details>
 <summary>COMPETENCIAS</summary>
 
-- Cc Diseña responsablemente sistemas, componentes o procesos para satisfacer necesidades dentro de restricciones realistas: económicos, ambientales, sociales, políticas, éticas, de salud, de seguridad, fabricación y sostenibilidad.
-- Cm Construye responsablemente soluciones siguiendo un proceso adecuado llevando a cabo las pruebas dispuestas a los recursos disponibles del cliente.
-- Cp Aplica de forma flexible técnicas, métodos, principios, normas, estándares y herramientas de ingeniería necesarias para la construcción de software e implementación de sistemas de información.
+- C.c Diseña responsablemente sistemas, componentes o procesos para satisfacer necesidades dentro de restricciones realistas: económicas, medio ambientales, sociales, políticas, éticas, de salud, de seguridad, manufacturación y sostenibilidad.
+- C.m Construye responsablemente soluciones siguiendo un proceso adecuado llevando a cabo las pruebas ajustada a los recursos disponibles del cliente.
+- C.p Aplica de forma flexible técnicas, métodos, principios, normas, estándares y herramientas de ingeniería necesarias para la construcción de software e implementación de sistemas de información.
 
-</detalles>
+</details>
 
-##  CONTENIDO DE LA GUIA
+## CONTENIDO DE LA GUÍA
 
-###  MARCO CONCEPTUAL
+### MARCO CONCEPTUAL
 
--    https://www.w3schools.com/nodejs/nodejs_intro.asp
--    https://nodejs.org/en/docs/guides/guía-de-primeros-inicios/
--    https://nodejs.dev/learn
--    https://www.w3schools.com/js/js_api_fetch.asp
--    https://expressjs.com/es/
--    https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Using_Fetch
--    https://developer.mozilla.org/es/docs/Learn/Server-side/Express_Nodejs/Introduction
+-   https://www.w3schools.com/nodejs/nodejs_intro.asp
+-   https://nodejs.org/en/docs/guides/getting-started-guide/
+-   https://nodejs.dev/learn
+-   https://www.w3schools.com/js/js_api_fetch.asp
+-   https://expressjs.com/es/
+-   https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Using_Fetch
+-   https://developer.mozilla.org/es/docs/Learn/Server-side/Express_Nodejs/Introduction
 
--    Instalar NodeJS
--    Cree un nuevo proyecto NodeJS.
--    Cree un archivo index.js
+-   Instale NodeJS
+-   Cree un nuevo proyecto NodeJS.
+-   Cree un archivo index.js
     ```sh
-    const http = require( ' http ' ) ;
-    servidor const = http.createServer (( solicitud , respuesta) => {
-        consola.log(solicitud.url);
-        respuesta.end("Hola mundo");
+    const http = require('http');
+    const server = http.createServer((request, response) => {
+        console.log(request.url);
+        response.end("Hola mundo");
     });
-    servidor.escucha( 3000 );
-    console.log("Escuchando en: http://localhost: 3000 ")
+    server.listen(3000);
+    console.log("Escuchando en: http://localhost:3000")
     ```
--    Luego lanza el servidor con :    
+-   Luego lance el servidor con:    
     ```sh
-    nodo index.js
+    node index.js
     ```
--    Note que console imprime en la salida estándar y el cliente sólo recibe el texto “Hola Mundo”. http :// 127 . 0 _ 0 _ 1 : 3000 /
--    El siguiente código modifica algunas líneas para usar un framework llamado express y devolver un archivo index.html
--    Para usar este código debe instalar express con npm : 
+-   Note que console imprime en la salida estándar y el cliente sólo recibe el texto “Hola Mundo”. http://127.0.0.1:3000/
+-   El siguiente código modifica algunas líneas para usar un framework llamado express y  devolver un archivo index.html
+-   Para usar este código debe instalar express con npm: 
     ```sh
-    $ npm instalación rápida    
+    $ npm install express    
     ```
     ```sh
-    const ruta = require('ruta');
-    const expreso = require('expreso');
-    const aplicación = express();
-    aplicación.escucha( 3000 , () => {
-        console.log("Escuchando en: http://localhost: 3000 ")
+    const path = require('path');
+    const express = require('express');
+    const app = express();
+    app.listen(3000, () => {
+        console.log("Escuchando en: http://localhost:3000")
     });
-    app.get('/', (solicitud, respuesta) => {
-        respuesta.sendFile(ruta.resolve(__dirname, 'index.html' )) ;
-    }) ;
+    app.get('/', (request, response) => {
+        response.sendFile(path.resolve(__dirname, 'index.html'));
+    });
     ```
--    Debe crear un archivo index.html en el directorio de su proyecto.
--    Tenga en cuenta que el servidor espera recibir una petición de tipo GET y la URL no contiene el nombre del archivo.
+-   Deberá crear un archivo index.html en el directorio de su proyecto.
+-   Note que el servidor espera recibir una petición de tipo GET y el URL no contiene el nombre del archivo.
 
-##  EJERCICIO RESUELTO POR EL DOCENTE
+## EJERCICIO RESUELTO POR EL DOCENTE
 
--    Cree una aplicación web que ejecute javascript en el cliente (dentro de la carpeta pub) y nodejs en el servidor.
+-   Cree una aplicación web que ejecute javascript en el cliente (dentro de la carpeta pub) y nodejs en el servidor.
     ```sh
-    const ruta = require( ' ruta ' ) ;
-    const express = require( ' express ' ) ;
-    const app = express ();
-    app.use(express.static( ' pub ' )) ;
-    aplicación.escucha(3000, () = > {
-        console.log( " Escuchando en: http://localhost:3000 " )
+    const path = require('path');
+    const express = require('express');
+    const app = express();
+    app.use(express.static('pub'));
+    app.listen(3000, () => {
+        console.log("Escuchando en: http://localhost:3000")
     });
-    app.get( ' / ' , (solicitud, respuesta) = > {
-        respuesta.sendFile(ruta.resolve(__dirname, ' index.html ' )) ;
-    }) ;
+    app.get('/', (request, response) => {
+        response.sendFile(path.resolve(__dirname, 'index.html'));
+    });
     ```
--    Cree una aplicación web que realice una petición ajax en el lado del cliente y responda usando nodejs en el lado del servidor.
--    En el lado del servidor :
+-   Cree una aplicación web que realice una petición ajax en el lado del cliente y responda usando nodejs en el lado del servidor.
+-   En el lado del servidor :
     ```sh
-    const fs = require( ' fs ' )
-    const ruta = require( ' ruta ' )
-    const express = require( ' express ' )
-    aplicación const = expreso ()
-    app.use(express.static( ' pub ' ))
-    aplicación.escucha(3000, () = > {
-        console.log( " Escuchando en: http://localhost:3000 " )
+    const fs = require('fs')
+    const path = require('path')
+    const express = require('express')
+    const app = express()
+    app.use(express.static('pub'))
+    app.listen(3000, () => {
+        console.log("Escuchando en: http://localhost:3000")
     });
-    app.get( ' / ' , (solicitud, respuesta) = > {
-        respuesta.sendFile(ruta.resolve(__dirname, ' index.html ' ))
+    app.get('/', (request, response) => {
+        response.sendFile(path.resolve(__dirname, 'index.html'))
     })
-    app.get( ' /recitar ' , (solicitud, respuesta) = > {
-        fs.readFile(ruta.resolve(__dirname, ' priv/poema.txt ' ), ' utf8 ' ,
-            (err, datos) = > {
-                si (err) {
-                    consola.error(err)
-                    respuesta.estado(500).json({
-                        error: ' mensaje '
+    app.get('/recitar', (request, response) => {
+        fs.readFile(path.resolve(__dirname, 'priv/poema.txt'), 'utf8',
+            (err, data) => {
+                if (err) {
+                    console.error(err)
+                    response.status(500).json({
+                        error: 'message'
                     })
-                    devolver
+                    return
                 }
-                respuesta.json({
-                    texto: datos.reemplazar(/ \n /g, ' <br> ' )
+                response.json({
+                    text: data.replace(/\n/g, '<br>')
                 })
             })
         //
     })
-    ` ` `
-- En el lado del cliente:
-    ` ` ` sh
-    función  recitar() {
-        const url = ' http://localhost:3000/recitar '
-        buscar (url). entonces (
-            respuesta = >  respuesta.json ()
-        ).entonces(
-            datos = > {
-                document.querySelector( " #poema " ).innerHTML = data.text
+    ```
+-   En el lado del cliente:
+    ```sh
+    function recitar() {
+        const url = 'http://localhost:3000/recitar'
+        fetch(url).then(
+            response => response.json()
+        ).then(
+            data => {
+                document.querySelector("#poema").innerHTML = data.text
             }
         )
     }
-    ` ` `
-- Si tiene errores lea: https://medium.com/zero-equals-false/using-cors-in-express-cac7e29b005b
-- Cree una aplicación que haga peticiones AJAX usando POST a un servidor NodeJS
-- En el lado del servidor
-    ` ` ` sh
-    const fs = require( ' fs ' )
-    const ruta = require( ' ruta ' )
-    const express = require( ' express ' )
-    const bp = require( ' analizador de cuerpo ' )
-    const MarkdownIt = require( ' markdown-it ' ),
-        md = nuevo MarkdownIt ();
-    aplicación const = expreso ()
-    app.use(express.static( ' pub ' ))
-    aplicación.uso(bp.json ())
+    ```
+-   Si tiene errores lea: https://medium.com/zero-equals-false/using-cors-in-express-cac7e29b005b
+-   Cree una aplicación que haga peticiones AJAX usando POST a un servidor NodeJS
+-   En el lado del servidor
+    ```sh
+    const fs = require('fs')
+    const path = require('path')
+    const express = require('express')
+    const bp = require('body-parser')
+    const MarkdownIt = require('markdown-it'),
+        md = new MarkdownIt();
+    const app = express()
+    app.use(express.static('pub'))
+    app.use(bp.json())
     app.use(bp.urlencoded({
-        extendido: cierto
+        extended: true
     }))
-    aplicación.escucha(3000, () = > {
-        console.log( " Escuchando en: http://localhost:3000 " )
+    app.listen(3000, () => {
+        console.log("Escuchando en: http://localhost:3000")
     })
-    app.get( ' / ' , (solicitud, respuesta) = > {
-        respuesta.sendFile(ruta.resolve(__dirname, ' index.html ' ))
+    app.get('/', (request, response) => {
+        response.sendFile(path.resolve(__dirname, 'index.html'))
     })
-    app.post( ' / ' , (solicitud, respuesta) = > {
-        consola.log(solicitud.cuerpo)
+    app.post('/', (request, response) => {
+        console.log(request.body)
         let markDownText = request.body.text
-        consola.log(markDownText)
+        console.log(markDownText)
         let htmlText = md.render(markDownText)
-        respuesta.setHeader( ' Tipo de contenido ' , ' aplicación/json ' )
-        respuesta.end(JSON.stringify({
-            texto: texto html
+        response.setHeader('Content-Type', 'application/json')
+        response.end(JSON.stringify({
+            text: htmlText
         }))
     })
-    ` ` `
-- Note que tanto el tanto GET como POST comparten la misma URL.
-- Al lado del cliente
-    ` ` ` sh
-    recital de función  (texto marcado) {
-	const url = ' http://localhost:3000/ '
-	datos constantes = {
-		texto: marcadoTexto
+    ```
+-   Note que tanto el tanto GET como POST comparten el mismo URL.
+-   En el lado del cliente
+    ```sh
+    function recitar(markupText) {
+	const url = 'http://localhost:3000/'
+	const data = {
+		text: markupText
 	}
-    consola.log(datos)
-	petición constante = {
-		método: ' POST ' , // Podría ser GET
-		encabezados: {
-			' Tipo de contenido ' : ' aplicación/json ' ,
+    console.log(data)
+	const request = {
+		method: 'POST', // Podría ser GET
+		headers: {
+			'Content-Type': 'application/json',
 		},
-		cuerpo: JSON.stringify(datos),
+		body: JSON.stringify(data),
 	}
-	http = buscar (url, solicitud)
-	http.entonces(
-		respuesta = >  respuesta.json ()
-	).entonces(
-		datos = > {
-			document.querySelector( " #htmlCode " ).innerHTML = data.text
+	http = fetch(url, request)
+	http.then(
+		response => response.json()
+	).then(
+		data => {
+			document.querySelector("#htmlCode").innerHTML = data.text
 		}
         )
     }
-    documento.addEventListener( ' DOMContentLoaded ' , función  () {
-        const text = document.querySelector( ' #markupText ' )
-        document.querySelector( ' #markupForm ' ).onsubmit = () = > {
-            recitar(texto.valor)
-            devolver  falso ;
+    document.addEventListener('DOMContentLoaded', function () {
+        const text = document.querySelector('#markupText')
+        document.querySelector('#markupForm').onsubmit = () => {
+            recitar(text.value)
+            return false;
         }
     })
-    ` ` `
+    ```
 #
 ## EJERCICIOS PROPUESTOS
-- En grupos de 3 a 5 personas implemente una aplicación web que navegue sobre archivos Markdown y permita:
-    1. Listas de los archivos Markdown disponibles
-    2. Ver el contenido de un archivo Markdown convertido a HTML
+-   En grupos de 3 a 5 personas implemente una aplicación web que navegue sobre archivos Markdown y permita:
+    1. Listas los archivos Markdown disponibles
+    2. Ver el contenido de un archivo Markdown traducido a HTML
     3. Crear nuevos archivos MarkDown y almacenarlos en el servidor
-- La comunicación entre el cliente y el servidor tiene que ser usando JSON únicamente.
+-   La comunicación entre el cliente y el servidor tiene que ser usando JSON sólamente.
 El cliente debe usar AJAX para sus peticiones
 El servidor debe usar NodeJS
 Su aplicación debe ser de página única, es decir que sólo habrá un archivo index.html y nada más.
-- Si los enlaces provistos en esta guía no le son necesarios, puede revisar códigos en Internet que le ayuden con cosas como ejemplos: listar un directorio en NodeJS ; pero deberá incluir los enlaces correspondientes en sus archivos como comentarios y sólo podrá usar el código de stackoverflow, incluir el código de cualquier otra fuente que esté prohibida y se considerará una actitud deshonesta.
+-   Si los enlaces proporcionado en esta guía no le son suficientes, puede revisar códigos en Internet que le ayuden con cosas como ejemplos: listar un directorio en NodeJS; pero deberá incluir los enlaces correspondientes en sus archivos como comentarios y sólo podrá usar código de stackoverflow, incluir código de cualquier otra fuente está prohibido y se considerará actitud deshonesta.
 #
 ## CUESTIONARIO
-- En el Ejemplo " Hola Mundo " con NodeJS. ¿Qué pasó con la línea: " Tipo de contenido ….. " ?
-- En los ejercicios. ¿En qué lugar debería estar el archivo poema.txt ?
-- ¿Entiende la expresión regular en el código y se da cuenta de para qué es útil ?
-- Tenga en cuenta que la respuesta del servidor está en formato JSON, ¿Habrá alguna forma de verla directamente ?
+- En el Ejemplo "Hola Mundo" con NodeJS. ¿Qué pasó con la línea: "Content type ….."?
+- En los ejercicios. ¿En qué lugar debería estar el archivo poema.txt?
+- ¿Entiende la expresión regular en el código y se da cuenta de para qué es útil?
+- Note que la respuesta del servidor está en formato JSON, ¿Habrá alguna forma de verla directamente?
 #
 ## REFERENCIAS
-- Código JavaScript utilizando el último ECMAScript. Packt Publishing Ltd, 2018.
--Greg Lim. Desarrollo inicial de Node.js, Express y MongoDB. Amazonas, 2019.
-- https://www.w3schools.com/nodejs/nodejs_intro.asp
-- https://nodejs.org/en/docs/guides/guía-de-primeros-inicios/
-- https://nodejs.dev/learn
-- https://www.w3schools.com/js/js_api_fetch.asp
-- https://expressjs.com/es/
-- https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Using_Fetch
-- https://developer.mozilla.org/es/docs/Learn/Server-side/Express_Nodejs/Introduction
+-   JavaScript code using the latest ECMAScript. Packt Publishing Ltd, 2018.
+-   Greg Lim. Beginning Node.js, Express & MongoDB Development. Amazon, 2019.
+-   https://www.w3schools.com/nodejs/nodejs_intro.asp
+-   https://nodejs.org/en/docs/guides/getting-started-guide/
+-   https://nodejs.dev/learn
+-   https://www.w3schools.com/js/js_api_fetch.asp
+-   https://expressjs.com/es/
+-   https://developer.mozilla.org/es/docs/Web/API/Fetch_API/Using_Fetch
+-   https://developer.mozilla.org/es/docs/Learn/Server-side/Express_Nodejs/Introduction
 #
-[licencia]: https://img.shields.io/github/license/rescobedoq/pw2 ? label=rescobedoq
-[archivo de licencia]: https://github.com/rescobedoq/pw2/blob/main/LICENSE
-[descargas]: https://img.shields.io/github/downloads/rescobedoq/pw2/total ? label=Descargas
-[lanzamientos]: https://github.com/rescobedoq/pw2/releases/
-[última confirmación]: https://img.shields.io/github/last-commit/rescobedoq/pw2 ? label=Último%20Confirmar
-[Debian]: https://img.shields.io/badge/Debian-D70A53 ? estilo=para-la-insignia & logo=debian & logoColor=blanco
-[sitio de Debian]: https://www.debian.org/index.es.html
-[Git]: https://img.shields.io/badge/git-%23F05033.svg ? estilo=para-la-insignia & logo=git & logoColor=blanco
-[git-sitio]: https://git-scm.com/
-[GitHub]: https://img.shields.io/badge/github-%23121011.svg ? estilo=para-la-insignia & logo=github & logoColor=blanco
-[sitio de github]: https://github.com/
-[Vim]: https://img.shields.io/badge/VIM-%2311AB00.svg ? estilo=para-la-insignia & logo=vim & logoColor=blanco
-[sitio vim]: https://www.vim.org/
-[Java]: https://img.shields.io/badge/java-%23ED8B00.svg ? estilo=para-la-insignia & logo=java & logoColor=blanco
-[sitio Java]: https://docs.oracle.com/javase/tutorial/
-[ ! [Debian][Debian]][sitio de Debian]
-[ ! [Git][Git]][git-sitio]
-[ ! [GitHub][GitHub]][sitio de github]
-[ ! [Vim][Vim]][vim-sitio]
-[ ! [Java][Java]][sitio Java]
-[ ! [Licencia][licencia]][archivo de licencia]
-[ ! [Descargas][descargas]][lanzamientos]
-[ ! [Última confirmación][última confirmación]][lanzamientos]
+[license]: https://img.shields.io/github/license/rescobedoq/pw2?label=rescobedoq
+[license-file]: https://github.com/rescobedoq/pw2/blob/main/LICENSE
+[downloads]: https://img.shields.io/github/downloads/rescobedoq/pw2/total?label=Downloads
+[releases]: https://github.com/rescobedoq/pw2/releases/
+[last-commit]: https://img.shields.io/github/last-commit/rescobedoq/pw2?label=Last%20Commit
+[Debian]: https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white
+[debian-site]: https://www.debian.org/index.es.html
+[Git]: https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white
+[git-site]: https://git-scm.com/
+[GitHub]: https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white
+[github-site]: https://github.com/
+[Vim]: https://img.shields.io/badge/VIM-%2311AB00.svg?style=for-the-badge&logo=vim&logoColor=white
+[vim-site]: https://www.vim.org/
+[Java]: https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white
+[java-site]: https://docs.oracle.com/javase/tutorial/
+[![Debian][Debian]][debian-site]
+[![Git][Git]][git-site]
+[![GitHub][GitHub]][github-site]
+[![Vim][Vim]][vim-site]
+[![Java][Java]][java-site]
+[![License][license]][license-file]
+[![Downloads][downloads]][releases]
+[![Last Commit][last-commit]][releases]
