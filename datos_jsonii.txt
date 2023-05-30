@@ -1,0 +1,9 @@
+{
+    "nombre":"roni",
+    "edad":22,
+    "cursos":[
+        {"clase":"hora", "nombre":"pweb2"},
+        {"clase":"hora", "nombre":"innovacion y creatividad"},
+        {"clase":"hora", "nombre":"calculo"},
+    ]
+}

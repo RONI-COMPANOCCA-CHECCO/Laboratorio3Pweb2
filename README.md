@@ -283,13 +283,22 @@
 El cliente debe usar AJAX para sus peticiones
 El servidor debe usar NodeJS
 Su aplicación debe ser de página única, es decir que sólo habrá un archivo index.html y nada más.
+><a href="https://ibb.co/hHxDGy9"><img src="https://i.ibb.co/q9LkHdj/node-1.jpg" alt="node-1" border="0"></a>
 -   Si los enlaces proporcionado en esta guía no le son suficientes, puede revisar códigos en Internet que le ayuden con cosas como ejemplos: listar un directorio en NodeJS; pero deberá incluir los enlaces correspondientes en sus archivos como comentarios y sólo podrá usar código de stackoverflow, incluir código de cualquier otra fuente está prohibido y se considerará actitud deshonesta.
 #
 ## CUESTIONARIO
+#
 - En el Ejemplo "Hola Mundo" con NodeJS. ¿Qué pasó con la línea: "Content type ….."?
+La función toma una petición y una respuesta como argumentos, y ejecuta una send() en la respuesta, para enviar la cadena de caracteres: "Hola Mundo!".
+#
 - En los ejercicios. ¿En qué lugar debería estar el archivo poema.txt?
+En NodeJS todas las operaciones de acceso al sistema de archivos están englobadas dentro del módulo Archivos del sistema.
+#
 - ¿Entiende la expresión regular en el código y se da cuenta de para qué es útil?
+Las expresiones regulares son patrones utilizados para encontrar una determinada combinación de caracteres dentro de una cadena de texto.
+#
 - Note que la respuesta del servidor está en formato JSON, ¿Habrá alguna forma de verla directamente?
+Para abrir y leer un archivo JSON necesitamos de un motor de texto que pueda identificar los códigos escritos dentro de este. Hay muchos programas de este tipo, pero los más populares son Python, Excel, Javascript y algunas plataformas en línea.
 #
 ## REFERENCIAS
 -   JavaScript code using the latest ECMAScript. Packt Publishing Ltd, 2018.

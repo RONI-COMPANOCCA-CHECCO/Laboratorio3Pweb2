@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <link rel="shortcut icon" href="g" />
+        <meta charset="utf-8">
+        <script>
+            var variable = new XMLHttpRequest();
+            variable.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    var myobj = JSON.parse(this.responseText);
+                    console.log(myobj.nombre);
+                }
+            };
+            variable.open("GET", "datos_jsonii.txt", true);
+            variable.send();
+        </script>
+    </head>
+    <body>
+        <h1>EJERCICIO II PWEB2 LAB 03</h1>
+    </body>
+
+</html>
